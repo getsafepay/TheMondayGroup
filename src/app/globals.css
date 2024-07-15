@@ -16,7 +16,16 @@
   }
 }
 
+input {
+  appearance: unset;
+}
+
+#__next[aria-hidden] {
+  filter: none !important;
+}
+
 body {
+  -webkit-font-smoothing: antialiased;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
