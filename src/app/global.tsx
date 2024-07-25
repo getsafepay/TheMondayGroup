@@ -27,8 +27,8 @@ export default function GlobalProvider({
   children: React.ReactNode;
 }) {
   return (
-    <>
-      {/* <Global
+    <html lang="en">
+      <Global
         styles={[
           css({
             "html, body, kbd, input, select": {
@@ -42,8 +42,8 @@ export default function GlobalProvider({
             },
           }),
         ]}
-      /> */}
+      />
       {children}
-    </>
+    </html>
   );
 }
