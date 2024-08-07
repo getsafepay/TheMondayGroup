@@ -1,4 +1,5 @@
 "use client";
+
 import { mergeClasses } from "@/helpers/mergeClasses";
 import { HeadingProps, alignments, colors } from "./types";
 

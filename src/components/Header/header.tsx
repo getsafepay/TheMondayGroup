@@ -97,7 +97,7 @@ export function Header(props: HeaderProps) {
         scrollPosition > 0 ? "bg-palette-white" : "bg-transparent"
       )}
     >
-      <section className="h-full block">
+      <section className="h-full block bg-white border-b border-gray-200">
         <Container className="flex items-center h-20">
           <Grid>
             <Column display={{ "": "flex" }}>

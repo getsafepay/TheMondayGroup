@@ -7,7 +7,7 @@ function PostCard(post: Post) {
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
         <Link
-          href={post.url}
+          href={`posts${post.slug}`}
           className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
         >
           {post.title}
@@ -16,10 +16,6 @@ function PostCard(post: Post) {
       <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
-      <div
-        className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
     </div>
   );
 }
@@ -30,9 +26,9 @@ export default function Home() {
   );
 
   return (
-    <div className="mx-auto max-w-xl py-8">
+    <div className="mx-auto max-w-4xl py-8">
       <h1 className="mb-8 text-center text-2xl font-black">
-        Testing NExt and Contentlayer
+        List of all posts
       </h1>
       {posts.map((post, idx) => (
         <PostCard key={idx} {...post} />
@@ -40,15 +36,3 @@ export default function Home() {
     </div>
   );
 }
-
-// import Image from "next/image";
-
-// export default function Home() {
-//   return (
-//     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-//       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left"></div>
-//     </main>
-//   );
-// }
-
-// app/page.tsx

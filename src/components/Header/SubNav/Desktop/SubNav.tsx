@@ -2,7 +2,8 @@ import { useMemo } from "react";
 import { DesktopSubNavGroup } from "./Group";
 import { SubNavigationGroupProps } from "../../types";
 import { Column, Grid } from "@/components/Foundations";
-import { Heading, Paragraph } from "@/components/Typography";
+import { Paragraph } from "@/components/Typography/Paragraph";
+import { Heading } from "@/components/Typography/Heading";
 
 export interface DesktopSubNavProps {
   title: string;

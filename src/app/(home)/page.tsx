@@ -1,5 +1,8 @@
 import { Container } from "@/components/Foundations";
+import ImageSpotlight from "@/components/LightboxImage";
 import { Transition } from "@/components/Transition";
+import { Heading } from "@/components/Typography";
+import Image from "next/image";
 
 export default function Page({
   params,
@@ -11,25 +14,26 @@ export default function Page({
   return (
     <Transition>
       <section className="h-full block">
-        <Container className="flex items-center h-20">
-          <p>
-            Welcome to The Monday Group (TMG). At TMG, we are more than a
-            multi-family office; we are a community of high net worth
-            individuals and families, forward-thinking companies, and top-tier
-            financial analysts working together to forge a future of prosperity
-            and growth. Our investments encompass a comprehensive array of asset
-            classes including Equities, Fixed Income, Real Estate,
-            Infrastructure, and a suite of Alternative Investments: Hedge Funds,
-            Venture Capital, Early Stage Start-Ups, and Private Businesses.
-            Mission Statement The Monday Group will cultivate a dynamic
-            ecosystem where high net worth individuals and families, innovative
-            companies, and the brightest minds in finance converge to achieve
-            shared and individual goals. By investing in relationships,
-            knowledge, and innovation, TMG aspires to be the cornerstone of
-            financial success and professional development, securing legacies,
-            catalyzing growth, and nurturing talent for a prosperous future. For
-            inquiries please email danh@themondaygroup.net
-          </p>
+        <Container className="flex flex-col items-center">
+          <div className="w-full">
+            <ImageSpotlight
+              src="/images/BannerImage.png"
+              alt="Descriptive Alt Text"
+              caption="This is an optional caption for the image."
+            />
+          </div>
+          <div>
+            <h2 className="text-4xl font-extrabold mb-6">Who are we?</h2>
+            <p>
+              The Monday Group is a distinguished multi-family office dedicated
+              to addressing the unique financial needs and aspirations of
+              high-net-worth individuals and families. Committed to excellence
+              and focused on wealth preservation, we specialize in managing and
+              growing wealth across diverse investment avenues. Our extensive
+              portfolio spans public and private markets, including real estate,
+              infrastructure, venture capital, and early-stage companies.
+            </p>
+          </div>
         </Container>
       </section>
     </Transition>
