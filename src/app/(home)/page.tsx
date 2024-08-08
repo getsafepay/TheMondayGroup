@@ -1,3 +1,4 @@
+"use client";
 import { Container } from "@/components/Foundations";
 import { Transition } from "@/components/Transition";
 
