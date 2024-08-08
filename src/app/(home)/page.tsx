@@ -1,8 +1,5 @@
 import { Container } from "@/components/Foundations";
-import ImageSpotlight from "@/components/LightboxImage";
 import { Transition } from "@/components/Transition";
-import { Heading } from "@/components/Typography";
-import Image from "next/image";
 
 export default function Page({
   params,
