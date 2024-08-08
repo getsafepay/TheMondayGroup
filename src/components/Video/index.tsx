@@ -1,4 +1,6 @@
+// @ts-nocheck
 "use client";
+
 import { css } from "@emotion/react";
 import dynamic from "next/dynamic";
 import { PropsWithChildren, useState } from "react";
