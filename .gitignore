@@ -1,1 +1,8 @@
+.DS_Store
+.cache
+.next
 node_modules
+out/
+*.tsbuildinfo
+# contentlayer
+.contentlayer
