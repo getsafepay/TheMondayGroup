@@ -2,12 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { mergeClasses } from "@/helpers/mergeClasses";
+import ImageSpotlight from "../LightboxImage";
+import Video from "../Video";
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={mergeClasses(
-        "font-heading mt-2 scroll-m-20 text-4xl font-bold",
+        "font-heading mt-2 scroll-m-20 text-3xl font-bold",
         className
       )}
       {...props}
@@ -58,7 +60,7 @@ const components = {
       {...props}
     />
   ),
-  a: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
+  Href: ({ className, ...props }: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a
       className={mergeClasses(
         "font-medium underline underline-offset-4",
@@ -88,9 +90,12 @@ const components = {
   li: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <li className={mergeClasses("mt-2", className)} {...props} />
   ),
-  blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
+  Putblockquote: ({
+    className,
+    ...props
+  }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
-      className={mergeClasses("mt-6 border-l-2 pl-6 italic", className)}
+      className={mergeClasses(" border-l-2 pl-6 italic my-6", className)}
       {...props}
     />
   ),
@@ -107,7 +112,7 @@ const components = {
     />
   ),
   hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className="my-4 md:my-8" {...props} />
+    <hr className="my-8 md:my-8" {...props} />
   ),
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto rounded-lg">
@@ -148,7 +153,6 @@ const components = {
       {...props}
     />
   ),
-  Image,
   Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={mergeClasses(
@@ -183,6 +187,19 @@ const components = {
       {...props}
     />
   ),
+
+  Image: ({ className, ...props }: React.ComponentProps<typeof Image>) => (
+    <Image className={className} {...props} />
+  ),
+
+  SpotlightImage: ({
+    className,
+    ...props
+  }: React.ComponentProps<typeof Image>) => <ImageSpotlight {...props} />,
+
+  EmbedVideo: ({ className, ...props }: React.ComponentProps<typeof Image>) => (
+    <Video {...props} />
+  ),
 };
 
 interface MdxProps {
@@ -190,11 +207,11 @@ interface MdxProps {
 }
 
 export function Mdx({ code }: MdxProps) {
-  const Component = useMDXComponent(code);
+  const MDXcontent = useMDXComponent(code);
 
   return (
     <div className="mdx">
-      <Component components={components} />
+      <MDXcontent components={components} />
     </div>
   );
 }

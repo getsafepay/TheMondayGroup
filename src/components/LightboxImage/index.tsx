@@ -1,12 +1,16 @@
 import { type CSSProperties } from "react";
 import { LightboxImage } from "./Lightbox";
 import { mergeClasses } from "@/helpers/mergeClasses";
+import {
+  StaticImageData,
+  StaticRequire,
+} from "next/dist/shared/lib/get-img-props";
 
 type Props = {
   alt: string;
   style?: CSSProperties;
   containerClassName?: string;
-  src: string;
+  src?: string | StaticImageData | StaticRequire;
   caption?: string;
 };
 
@@ -17,7 +21,7 @@ export default function ImageSpotlight({
   containerClassName,
   caption,
 }: Props) {
-  return (
+  return src ? (
     <figure
       className={mergeClasses(
         "text-center bg-subtle py-2.5 my-5 rounded-lg",
@@ -25,7 +29,7 @@ export default function ImageSpotlight({
       )}
     >
       <LightboxImage
-        src={src}
+        src={src.toString()}
         alt={alt}
         style={style}
         className="inline rounded-md transition-opacity duration-default ease-in-out hover:opacity-80"
@@ -36,5 +40,5 @@ export default function ImageSpotlight({
         </figcaption>
       )}
     </figure>
-  );
+  ) : null;
 }

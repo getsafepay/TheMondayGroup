@@ -8,13 +8,13 @@ export function Footer() {
           ["Home", "/"],
           ["Posts", "/posts"],
           ["Login", "/"],
-          ["Contact", "/"],
+          ["Contact", "mailto:danh@themondaygroup.net?"],
           ["The Monday Group LLC", "/"],
         ].map(([title, url], i) => (
           <a
             href={url}
             key={i}
-            className="rounded-lg px-3 py-2 text-slate-700 font-medium hover:bg-slate-100 hover:text-slate-900"
+            className="rounded-lg px-3 py-8 text-slate-700 font-medium hover:underline"
           >
             {title}
           </a>

@@ -42,7 +42,7 @@ export function MobileNavigation(props: MobileNavProps) {
       )}
     >
       <nav className="w-full mt-20 h-full md:w-[420px]">
-        <ul className="bg-palette-grey1 h-full w-full list-none">
+        <ul className="bg-white h-full w-full list-none">
           {navItems}
           <LoginNavItem />
           <SignupNavItem />

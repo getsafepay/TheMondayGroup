@@ -14,17 +14,18 @@ export default function Page({
   return (
     <Transition>
       <section className="h-full block">
+        <div className="w-full h-full min-h-96 overflow-hidden">
+          <img src="https://picsum.photos/id/26/2000/1000" />
+        </div>
         <Container className="flex flex-col items-center">
-          <div className="w-full">
-            <ImageSpotlight
-              src="/images/BannerImage.png"
-              alt="Descriptive Alt Text"
-              caption="This is an optional caption for the image."
-            />
-          </div>
           <div>
-            <h2 className="text-4xl font-extrabold mb-6">Who are we?</h2>
-            <p>
+            <h2
+              id="whoweare"
+              className="text-4xl font-extrabold mb-8 mt-8 text-center"
+            >
+              Who are we
+            </h2>
+            <p className="text-center">
               The Monday Group is a distinguished multi-family office dedicated
               to addressing the unique financial needs and aspirations of
               high-net-worth individuals and families. Committed to excellence
@@ -32,6 +33,17 @@ export default function Page({
               growing wealth across diverse investment avenues. Our extensive
               portfolio spans public and private markets, including real estate,
               infrastructure, venture capital, and early-stage companies.
+            </p>
+
+            <p className="mt-8 text-center">
+              For inquiries please email{" "}
+              <b>
+                <u>
+                  <a href="mailto:danh@themondaygroup.net?">
+                    danh@themondaygroup.net
+                  </a>
+                </u>
+              </b>
             </p>
           </div>
         </Container>

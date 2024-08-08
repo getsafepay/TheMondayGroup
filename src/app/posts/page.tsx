@@ -8,7 +8,7 @@ function PostCard(post: Post) {
       <h2 className="mb-1 text-xl">
         <Link
           href={`posts${post.slug}`}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="text-blue-700 hover:text-blue-900 dark:text-blue-400 text-xl"
         >
           {post.title}
         </Link>
@@ -16,6 +16,8 @@ function PostCard(post: Post) {
       <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
         {format(parseISO(post.date), "LLLL d, yyyy")}
       </time>
+      <p className=" tracking-tight">{post.description}</p>
+      <hr className="my-8" />
     </div>
   );
 }

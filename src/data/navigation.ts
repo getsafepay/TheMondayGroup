@@ -4,11 +4,11 @@ export const navigation: NavigationItemProps[] = [
   {
     title: "About us",
     navKey: "about-us",
-    href: "/about",
+    href: "#whoweare",
   },
   {
     title: "Contact us",
     navKey: "contact-us",
-    href: "/contact",
+    href: "mailto:danh@themondaygroup.net?",
   },
 ];
