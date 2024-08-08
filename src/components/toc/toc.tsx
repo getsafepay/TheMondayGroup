@@ -1,8 +1,5 @@
-//@ts-nocheck
 "use client";
-
 import * as React from "react";
-
 import { TableOfContents } from "@/lib/toc";
 import { useMounted } from "@/helpers/useMounted";
 import { cn } from "@/helpers/mergeClasses";
@@ -23,6 +20,7 @@ export function DashboardTableOfContents({ toc }: TocProps) {
         : [],
     [toc]
   );
+  // @ts-ignore
   const activeHeading = useActiveItem(itemIds);
   const mounted = useMounted();
 
@@ -33,7 +31,10 @@ export function DashboardTableOfContents({ toc }: TocProps) {
   return (
     <div className="space-y-2">
       <p className="font-medium font-semibold">On This Page</p>
-      <Tree tree={toc} activeItem={activeHeading} />
+      <Tree
+        tree={toc}
+        activeItem={activeHeading === null ? undefined : activeHeading}
+      />
     </div>
   );
 }
@@ -46,6 +47,7 @@ function useActiveItem(itemIds: string[]) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            // @ts-ignore
             setActiveId(entry.target.id);
           }
         });
