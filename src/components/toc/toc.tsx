@@ -83,15 +83,16 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
   return tree?.items?.length && level < 3 ? (
     <ul className={cn("m-0 list-none", { "pl-4": level !== 1 })}>
       {tree.items.map((item, index) => {
+        console.log(item.title, "---");
         return (
           <li key={index} className={cn("mt-0 pt-2 ")}>
             <a
               href={item.url}
               className={cn(
-                "inline-block no-underline transition-colors hover:text-foreground hover:text-blue-600",
+                "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black",
                 item.url === `#${activeItem}`
-                  ? "font-medium text-foreground"
-                  : "text-muted-foreground"
+                  ? "font-medium text-black"
+                  : "text-gray-600"
               )}
             >
               {item.title}

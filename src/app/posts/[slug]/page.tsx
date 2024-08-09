@@ -1,8 +1,8 @@
 import { Mdx } from "@/components/Markdown/mdx-components";
-import { ScrollArea } from "@/components/toc/scroll-area";
 import { DashboardTableOfContents } from "@/components/toc/toc";
 import { getTableOfContents } from "@/lib/toc";
 import { allPosts, type Post } from "contentlayer/generated";
+import { format, parseISO } from "date-fns";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -22,20 +22,21 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const toc = await getTableOfContents(post.body.raw);
 
   return (
-    <div className="mx-auto max-w-6xl py-8 relative">
-      {post.toc && (
-        <div className="absolute top-16 -right-24 -mt-10 pt-4 text-sm  w-60 z-40">
-          <ScrollArea className="pb-10">
-            <div className="sticky top-20 -mt-10 py-12">
-              <DashboardTableOfContents toc={toc} />
-            </div>
-          </ScrollArea>
-        </div>
-      )}
-      <div>
-        <p>Title: {post.title}</p>
+    <div className="mx-auto max-w-6xl py-8 flex justify-end">
+      <div className="max-w-4xl pr-6">
+        <h1 className="text-3xl">{post.title}</h1>
+        <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
+          {format(parseISO(post.date), "LLLL d, yyyy")}
+        </time>
         <Mdx code={post.body.code} />
       </div>
+      {post.toc && (
+        <div className="text-sm z-40 bg-white">
+          <div className="sticky top-20 -mt-10 py-12">
+            <DashboardTableOfContents toc={toc} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
