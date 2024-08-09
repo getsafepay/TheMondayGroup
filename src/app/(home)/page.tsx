@@ -1,8 +1,5 @@
 import { Container } from "@/components/Foundations";
-import ImageSpotlight from "@/components/LightboxImage";
 import { Transition } from "@/components/Transition";
-import { Heading } from "@/components/Typography";
-import Image from "next/image";
 
 export default function Page({
   params,
@@ -14,8 +11,8 @@ export default function Page({
   return (
     <Transition>
       <section className="h-full block">
-        <div className="w-full h-full min-h-96 overflow-hidden">
-          <img src="https://picsum.photos/id/26/2000/1000" />
+        <div className="w-full h-full min-h-96 overflow-hidden bg-black text-center">
+          <img src="https://picsum.photos/id/26/3000/1000" className="m-auto" />
         </div>
         <Container className="flex flex-col items-center">
           <div>

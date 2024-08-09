@@ -7,54 +7,45 @@ import Video from "../Video";
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h1
+    <h2
       className={mergeClasses(
-        "font-heading mt-2 scroll-m-20 text-3xl font-bold",
+        "font-heading mt-12 scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight",
         className
       )}
       {...props}
     />
   ),
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h2
+    <h3
       className={mergeClasses(
-        "font-heading mt-12 scroll-m-20 pb-2 text-2xl font-semibold tracking-tight first:mt-0",
+        "font-heading mt-12 scroll-m-20 pb-2 text-xl tracking-tight first:mt-0",
         className
       )}
       {...props}
     />
   ),
   h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h3
+    <h4
       className={mergeClasses(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "font-heading mt-8 scroll-m-20 text-lg tracking-tight",
         className
       )}
       {...props}
     />
   ),
   h4: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h4
+    <h5
       className={mergeClasses(
-        "font-heading mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
+        "font-heading mt-8 scroll-m-20 text-sm tracking-tight",
         className
       )}
       {...props}
     />
   ),
   h5: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h5
-      className={mergeClasses(
-        "mt-8 scroll-m-20 text-lg font-semibold tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  ),
-  h6: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h6
       className={mergeClasses(
-        "mt-8 scroll-m-20 text-base font-semibold tracking-tight",
+        "mt-8 scroll-m-20 text-lg tracking-tight",
         className
       )}
       {...props}
@@ -72,7 +63,7 @@ const components = {
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
       className={mergeClasses(
-        "leading-7 [&:not(:first-child)]:mt-6",
+        "leading-7 [&:not(:first-child)]:mt-6 first:mt-6",
         className
       )}
       {...props}
@@ -128,7 +119,7 @@ const components = {
   th: ({ className, ...props }: React.HTMLAttributes<HTMLTableCellElement>) => (
     <th
       className={mergeClasses(
-        "border px-4 py-2 text-left font-bold [&[align=center]]:text-center [&[align=right]]:text-right",
+        "border px-4 py-2 text-left [&[align=center]]:text-center [&[align=right]]:text-right",
         className
       )}
       {...props}
@@ -156,7 +147,7 @@ const components = {
   Step: ({ className, ...props }: React.ComponentProps<"h3">) => (
     <h3
       className={mergeClasses(
-        "font-heading mt-8 scroll-m-20 text-xl font-semibold tracking-tight",
+        "font-heading mt-8 scroll-m-20 text-xl tracking-tight",
         className
       )}
       {...props}
@@ -189,7 +180,7 @@ const components = {
   ),
 
   Image: ({ className, ...props }: React.ComponentProps<typeof Image>) => (
-    <Image className={className} {...props} />
+    <Image className={mergeClasses("my-4", className)} {...props} />
   ),
 
   SpotlightImage: ({
