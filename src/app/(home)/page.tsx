@@ -24,7 +24,7 @@ export default function Page({
             >
               Who are we
             </h2>
-            <p className="text-center text-black dark:text-black">
+            <p className="text-center">
               The Monday Group is a distinguished multi-family office dedicated
               to addressing the unique financial needs and aspirations of
               high-net-worth individuals and families. Committed to excellence
