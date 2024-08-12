@@ -11,9 +11,11 @@ export default function Page({
   return (
     <Transition>
       <section className="h-full block">
-        <div className="w-full h-full min-h-96 overflow-hidden bg-black text-center">
-          <img src="https://picsum.photos/id/26/3000/1000" className="m-auto" />
+        <div className="w-full h-screen min-h-96 overflow-hidden bg-black text-center">
+          <img src="https://picsum.photos/id/26/3000" className="m-auto" />
         </div>
+      </section>
+      <section>
         <Container className="flex flex-col items-center">
           <div>
             <h2
@@ -22,7 +24,7 @@ export default function Page({
             >
               Who are we
             </h2>
-            <p className="text-center">
+            <p className="text-center text-black dark:text-black">
               The Monday Group is a distinguished multi-family office dedicated
               to addressing the unique financial needs and aspirations of
               high-net-worth individuals and families. Committed to excellence

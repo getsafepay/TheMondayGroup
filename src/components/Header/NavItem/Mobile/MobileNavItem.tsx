@@ -66,7 +66,7 @@ export function LoginNavItem() {
   return (
     <li className=" pb-4 pt-6 relative px-6 md:px-12">
       <LinkButton variant="primary" color="black">
-        Login
+        Member Login
       </LinkButton>
     </li>
   );

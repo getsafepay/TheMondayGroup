@@ -70,7 +70,7 @@ export function DesktopNavItem(props: DesktopNavItemProps) {
           aria-expanded="false"
           onClick={props.onClick}
           className={mergeClasses(
-            "text-default flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent transition-shadow",
+            "font-semibold flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent transition-shadow",
             props.isActive && `shadow-[inset_0px_3px] shadow-primary-blue`
           )}
         >
@@ -120,9 +120,9 @@ export function LoginNavItem() {
       role="none"
       className="flex items-center h-full m-0 p-0 ml-6 flex-1 justify-end"
     >
-      <LinkButton variant="primary" color="black">
-        Login
-      </LinkButton>
+      <Button variant="secondary" color="white">
+        Member Login
+      </Button>
     </li>
   );
 }

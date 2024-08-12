@@ -28,7 +28,7 @@ export default function Home() {
   );
 
   return (
-    <div className="mx-auto max-w-4xl py-8">
+    <div className="mx-auto max-w-4xl py-8 mt-20">
       <h1 className="mb-8 text-center text-2xl font-black">
         List of all posts
       </h1>

@@ -91,13 +91,13 @@ export function Header(props: HeaderProps) {
     <header
       ref={ref}
       className={mergeClasses(
-        "h-20 w-full z-10 transition-all",
+        "h-20 w-full z-10 transition-all bg-transparent",
         showHeader ? "translate-y-0" : "-translate-y-full",
         fixHeader ? "fixed" : "absolute",
         scrollPosition > 0 ? "bg-palette-white" : "bg-transparent"
       )}
     >
-      <section className="h-full block bg-white border-b border-gray-200">
+      <section className="h-full block">
         <Container className="flex items-center h-20">
           <Grid>
             <Column display={{ "": "flex" }}>

@@ -33,7 +33,7 @@ export function DesktopNavigation(props: DesktopNavigationProps) {
       >
         {navItems}
         <LoginNavItem />
-        <SignupNavItem />
+        {/* <SignupNavItem /> */}
       </ul>
     </nav>
   );

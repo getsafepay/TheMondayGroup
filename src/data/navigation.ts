@@ -7,8 +7,8 @@ export const navigation: NavigationItemProps[] = [
     href: "#whoweare",
   },
   {
-    title: "Contact us",
-    navKey: "contact-us",
-    href: "mailto:danh@themondaygroup.net?",
+    title: "Posts",
+    navKey: "posts",
+    href: "/posts",
   },
 ];

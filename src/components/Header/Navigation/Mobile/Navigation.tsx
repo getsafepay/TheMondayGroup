@@ -45,7 +45,7 @@ export function MobileNavigation(props: MobileNavProps) {
         <ul className="bg-white h-full w-full list-none">
           {navItems}
           <LoginNavItem />
-          <SignupNavItem />
+          {/* <SignupNavItem /> */}
         </ul>
       </nav>
     </div>

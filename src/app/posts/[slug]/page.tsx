@@ -22,8 +22,8 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const toc = await getTableOfContents(post.body.raw);
 
   return (
-    <div className="mx-auto max-w-6xl py-8 flex justify-end">
-      <div className="max-w-4xl pr-6">
+    <div className="max-w-6xl py-8 mt-20 flex mx-auto sm:justify-center">
+      <div className="max-w-4xl px-4 xl:px-0 xl:pr-6 ">
         <h1 className="text-3xl">{post.title}</h1>
         <time dateTime={post.date} className="mb-2 block text-xs text-gray-600">
           {format(parseISO(post.date), "LLLL d, yyyy")}
@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <Mdx code={post.body.code} />
       </div>
       {post.toc && (
-        <div className="text-sm z-40 bg-white">
+        <div className="text-sm z-40 bg-white hidden xl:block">
           <div className="sticky top-20 -mt-10 py-12">
             <DashboardTableOfContents toc={toc} />
           </div>
