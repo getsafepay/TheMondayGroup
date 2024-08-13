@@ -13,7 +13,7 @@ export default function Page({
       <section className="h-full block">
         <div className="w-full h-screen overflow-hidden bg-black text-center">
           <img
-            src="https://picsum.photos/id/26/3000"
+            src="/images/mainImage.jpg"
             className="m-auto h-full w-full object-cover"
           />
         </div>
