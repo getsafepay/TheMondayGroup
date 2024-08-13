@@ -25,7 +25,7 @@ export function Section({
   let styles = [];
   switch (bg) {
     case "light":
-      styles.push("bg-palette-white");
+      styles.push("bg-white");
       break;
     case "grey":
       styles.push("bg-primary-grey");
