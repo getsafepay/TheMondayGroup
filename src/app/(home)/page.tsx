@@ -18,7 +18,7 @@ export default function Page({
           />
         </div>
       </section>
-      <section className="py-20">
+      <section className="pt-20 pb-5">
         <Container className="flex flex-col xl:flex-row">
           <Column columns={{ "": 12, "xl:": 6 }}>
             <div>
