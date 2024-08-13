@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <Mdx code={post.body.code} />
       </div>
       {post.toc && (
-        <div className="text-sm z-40 bg-white hidden xl:block">
+        <div className="text-sm bg-white hidden xl:block">
           <div className="sticky top-20 -mt-10 py-12">
             <DashboardTableOfContents toc={toc} />
           </div>

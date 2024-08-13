@@ -94,7 +94,9 @@ export function Header(props: HeaderProps) {
         "h-20 w-full z-10 transition-all bg-white",
         showHeader ? "translate-y-0" : "-translate-y-full",
         fixHeader ? "fixed" : "absolute",
-        scrollPosition > 0 ? "bg-black/30" : "bg-black/30"
+        scrollPosition > 0
+          ? "bg-black/20 backdrop-blur-sm"
+          : "bg-black/20 backdrop-blur-sm"
       )}
     >
       <section className="h-full block">
