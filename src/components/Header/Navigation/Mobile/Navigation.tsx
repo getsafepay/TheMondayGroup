@@ -36,7 +36,7 @@ export function MobileNavigation(props: MobileNavProps) {
   return (
     <div
       className={mergeClasses(
-        "w-0 translate-x-full transition-all duration-300 bg-palette-white h-screen overflow-hidden fixed top-0 right-0 z-10",
+        "w-0 translate-x-full transition-all duration-300 bg-white h-screen overflow-hidden fixed top-0 right-0 z-10",
         "shadow-[-12px_24px_24px_0px_rgba(0,17,44,0.1)]",
         props.visible && "translate-x-0 w-full md:w-[420px]"
       )}

@@ -70,7 +70,7 @@ export function DesktopNavItem(props: DesktopNavItemProps) {
           aria-expanded="false"
           onClick={props.onClick}
           className={mergeClasses(
-            "font-semibold flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent transition-shadow",
+            "flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent text-white transition-shadow",
             props.isActive && `shadow-[inset_0px_3px] shadow-primary-blue`
           )}
         >
@@ -93,7 +93,7 @@ export function DesktopNavItem(props: DesktopNavItemProps) {
               variants={variants}
               initial={false}
               animate={props.isActive ? "show" : "hide"}
-              className="bg-palette-white shadow-nav-menu fixed left-0 overflow-hidden top-20 w-full"
+              className="bg-white shadow-nav-menu fixed left-0 overflow-hidden top-20 w-full"
             >
               <motion.div
                 key={"subNavMenu"}
@@ -120,7 +120,7 @@ export function LoginNavItem() {
       role="none"
       className="flex items-center h-full m-0 p-0 ml-6 flex-1 justify-end"
     >
-      <Button variant="secondary" color="white">
+      <Button variant="primary" color="white">
         Member Login
       </Button>
     </li>

@@ -29,7 +29,7 @@ export function MobileNavItem(props: MobileNavItemProps) {
   }, [props.subNav, props.isActive]);
 
   return (
-    <li className="first-of-type:pt-6 pb-4 pt-4 bg-palette-white relative px-6 md:px-12">
+    <li className="first-of-type:pt-6 pb-4 pt-4 bg-white relative px-6 md:px-12">
       <LinkButton
         onClick={props.href ? () => {} : handleOnClick}
         href={props.href}

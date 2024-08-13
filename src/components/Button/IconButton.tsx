@@ -18,7 +18,7 @@ interface IconButtonProps {
 }
 
 const baseClasses =
-  "inline-flex items-center font-semibold text-lg leading-6 rounded-lg relative justify-center h-12 w-12";
+  "inline-flex items-center text-lg leading-6 rounded-lg relative justify-center h-12 w-12";
 
 const variantClasses = {
   primary: {

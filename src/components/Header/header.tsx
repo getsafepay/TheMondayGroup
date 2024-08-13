@@ -91,10 +91,10 @@ export function Header(props: HeaderProps) {
     <header
       ref={ref}
       className={mergeClasses(
-        "h-20 w-full z-10 transition-all bg-transparent",
+        "h-20 w-full z-10 transition-all bg-white",
         showHeader ? "translate-y-0" : "-translate-y-full",
         fixHeader ? "fixed" : "absolute",
-        scrollPosition > 0 ? "bg-palette-white" : "bg-transparent"
+        scrollPosition > 0 ? "bg-black/30" : "bg-black/30"
       )}
     >
       <section className="h-full block">

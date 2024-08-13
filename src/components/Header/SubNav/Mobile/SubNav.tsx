@@ -25,7 +25,7 @@ export function MobileSubNav(props: MobileSubNavProps) {
   return (
     <div
       className={mergeClasses(
-        "translate-x-full transition-transform duration-300 z-10 fixed top-0 right-0 overflow-hidden h-screen bg-palette-white w-full md:w-[420px]",
+        "translate-x-full transition-transform duration-300 z-10 fixed top-0 right-0 overflow-hidden h-screen bg-white w-full md:w-[420px]",
         props.isVisible && "translate-x-0"
       )}
     >
@@ -41,7 +41,7 @@ export function MobileSubNav(props: MobileSubNavProps) {
         </LinkButton>
         <div className="w-full overflow-hidden h-[calc(100vh-168px)]">
           <div className="h-full overflow-scroll [scrollbar-width:none] [-ms-overflow-style: none]">
-            <p className="bg-palette-white px-6 md:px-12 text-[16px] font-light">
+            <p className="bg-white px-6 md:px-12 text-[16px] font-light">
               {props.description}
             </p>
             {items}

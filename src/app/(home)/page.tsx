@@ -21,10 +21,7 @@ export default function Page({
       <section>
         <Container className="flex flex-col items-center">
           <div>
-            <h2
-              id="whoweare"
-              className="text-4xl font-extrabold mb-8 mt-8 text-center"
-            >
+            <h2 id="whoweare" className="text-4xl mb-8 mt-8 text-center">
               Who are we
             </h2>
             <p className="text-center">

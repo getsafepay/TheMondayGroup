@@ -15,7 +15,7 @@ export function MobileSubNavGroup(props: SubNavGroupProps) {
   }, [props.groupItems]);
 
   return (
-    <ul className="bg-palette-white list-none p-6 md:px-12">
+    <ul className="bg-white list-none p-6 md:px-12">
       <li className="pb-3">
         <h5 className="text-[20px] font-semibold">{props.groupTitle}</h5>
       </li>

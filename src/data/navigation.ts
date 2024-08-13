@@ -4,7 +4,7 @@ export const navigation: NavigationItemProps[] = [
   {
     title: "About us",
     navKey: "about-us",
-    href: "#whoweare",
+    href: "/#whoweare",
   },
   {
     title: "Posts",
