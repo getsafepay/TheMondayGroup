@@ -11,8 +11,11 @@ export default function Page({
   return (
     <Transition>
       <section className="h-full block">
-        <div className="w-full h-screen min-h-96 overflow-hidden bg-black text-center">
-          <img src="https://picsum.photos/id/26/3000" className="m-auto" />
+        <div className="w-full h-screen overflow-hidden bg-black text-center">
+          <img
+            src="https://picsum.photos/id/26/3000"
+            className="m-auto h-full w-full object-cover"
+          />
         </div>
       </section>
       <section>
