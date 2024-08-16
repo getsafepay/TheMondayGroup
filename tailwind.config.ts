@@ -14,6 +14,10 @@ const config: Config = {
   darkMode: "selector",
   theme: {
     extend: {
+      colors: {
+        "blue-mid-gradient": "#214BFF",
+        "blue-last-gradient": "#183A8C",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
