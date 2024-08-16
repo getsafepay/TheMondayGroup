@@ -106,7 +106,7 @@ export function Header(props: HeaderProps) {
               <div className="flex items-center h-full z-20">
                 <Logo />
               </div>
-              <div className="h-full relative w-full">
+              {/* <div className="h-full relative w-full">
                 <DesktopNavigation
                   navigation={props.navigation}
                   handleClickNavigationItem={handleClickDesktopNavigationItem}
@@ -131,7 +131,7 @@ export function Header(props: HeaderProps) {
                     }
                   />
                 </div>
-              </div>
+              </div> */}
             </Column>
           </Grid>
         </Container>

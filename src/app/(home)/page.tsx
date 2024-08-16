@@ -11,13 +11,20 @@ export default function Page({
 }) {
   return (
     <Transition>
-      <WavyBackground
-        backgroundFill="white"
-        // containerClassName="bg-slate-100 overflow-hidden"
-        className="h-full block"
-        blur={0}
-      >
-        <section className="block w-full pt-32">
+      <div className="h-screen w-screen bg-black overflow-hidden absolute">
+        <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-36 w-full bg-black absolute  z-30 -rotate-12 -bottom-4 -right-10"></div>
+        {/* -bottom-4 -right-10 */}
+      </div>
+      <div className="h-screen w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex justify-center">
+        {/* Radial gradient for the container to give a faded look */}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)]"></div>{" "}
+        {/* <WavyBackground
+          backgroundFill="white"
+          // containerClassName="bg-slate-100 overflow-hidden"
+          className="h-full block"
+          blur={0}
+        > */}
+        <section className="block w-full pt-32 z-50">
           <Container className="flex flex-col xl:flex-row">
             <Grid>
               <Column columns={{ "": 12, "xl:": 6 }}>
@@ -57,7 +64,8 @@ export default function Page({
             </Grid>
           </Container>
         </section>
-      </WavyBackground>
+        {/* </WavyBackground> */}
+      </div>
     </Transition>
   );
 }
