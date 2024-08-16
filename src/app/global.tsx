@@ -1,12 +1,14 @@
 "use client";
 import localFont from "next/font/local";
-import { Fira_Code } from "next/font/google";
+import { Fira_Code, Raleway } from "next/font/google";
 import { css, Global } from "@emotion/react";
 
-export const headingFont = localFont({
-  src: "../../assets/fonts/sohne/soehne-web-halbfett.woff2",
+export const headingFont = Raleway({
+  // src: "../../assets/fonts/raleway/Raleway-VariableFont_wght.ttf",
   display: "swap",
-  variable: "--font-soehne-halbfett",
+  // variable: "--font-soehne-halbfett",
+  subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
 export const monospaceFont = Fira_Code({
@@ -15,10 +17,12 @@ export const monospaceFont = Fira_Code({
   subsets: ["latin"],
 });
 
-export const bodyFont = localFont({
-  src: "../../assets/fonts/sohne/soehne-web-leicht.woff2",
+export const bodyFont = Raleway({
+  // src: "../../assets/fonts/raleway/Raleway-VariableFont_wght.ttf",
   display: "swap",
-  variable: "--font-soehne-leicht",
+  // variable: "--font-soehne-leicht",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export default function GlobalProvider({
