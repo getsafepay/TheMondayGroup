@@ -91,8 +91,8 @@ export function Header(props: HeaderProps) {
     <header
       ref={ref}
       className={mergeClasses(
-        "h-20 w-full z-10 transition-all transparent",
-        showHeader ? "translate-y-0" : "-translate-y-full",
+        "h-20 w-full z-20 transition-all transparent",
+        // showHeader ? "translate-y-0" : "-translate-y-full",
         fixHeader ? "fixed" : "absolute"
         // scrollPosition > 0
         //   ? "bg-black/20 backdrop-blur-sm"

@@ -12,7 +12,7 @@ export function Logo() {
           src="/images/LogoTMG.png"
           width={250}
           height={100}
-          className="hidden md:block"
+          className="block"
           alt="Logo"
         />
       </div>
