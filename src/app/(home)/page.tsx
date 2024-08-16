@@ -15,7 +15,7 @@ export default function Page({
         backgroundFill="white"
         // containerClassName="bg-slate-100 overflow-hidden"
         className="h-full block"
-        blur={2}
+        blur={0}
       >
         <section className="block w-full pt-32">
           <Container className="flex flex-col xl:flex-row">
