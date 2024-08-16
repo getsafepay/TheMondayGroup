@@ -1,1 +1,1 @@
-export { WavyBackground } from "./wavy";
+export { WavyBackground } from "./Wavy";
