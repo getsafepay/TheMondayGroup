@@ -6,7 +6,8 @@ import { SubNavigationProps } from "@/components/Header/types";
 import { Container } from "@/components/Foundations";
 import { Button, LinkButton } from "@/components/Button";
 import { AnimatePresence, delay, motion } from "framer-motion";
-
+import Link from "next/link";
+import { LinkBase } from "@/components/Button/LinkBase";
 export interface DesktopNavItemProps {
   title: string;
   navKey: string;
@@ -70,7 +71,7 @@ export function DesktopNavItem(props: DesktopNavItemProps) {
           aria-expanded="false"
           onClick={props.onClick}
           className={mergeClasses(
-            "flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent text-white transition-shadow",
+            "flex items-center text-base h-20 px-1 py-0 relative border-0 bg-transparent transition-shadow",
             props.isActive && `shadow-[inset_0px_3px] shadow-primary-blue`
           )}
         >
@@ -120,9 +121,14 @@ export function LoginNavItem() {
       role="none"
       className="flex items-center h-full m-0 p-0 ml-6 flex-1 justify-end"
     >
-      <Button variant="primary" color="white">
+      {/* <Button variant="secondary" color="white">
         Member Login
-      </Button>
+      </Button> */}
+
+      {/* <Link href="/">Member login</Link> */}
+      <LinkBase href="/" className="underline">
+        Member login
+      </LinkBase>
     </li>
   );
 }
