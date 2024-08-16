@@ -12,7 +12,7 @@ export default function Page({
   return (
     <Transition>
       <div className="h-screen w-screen bg-black overflow-hidden absolute">
-        <div className="bg-gradient-to-r from-indigo-500  via-blue-mid-gradient to-blue-last-gradient  h-[44%] w-[200%] bg-black -skew-y-12  absolute z-30 -bottom-20 -left-40 right-20 after:rotate-12"></div>
+        <div className="bg-gradient-to-r from-indigo-500  via-blue-mid-gradient to-blue-last-gradient  h-[44%] w-[200%] bg-black -skew-y-12  absolute z-30 -bottom-20 -left-40 right-40 after:rotate-12"></div>
         {/* -bottom-4 -right-10 */}
       </div>
       <div className="h-screen w-full dark:bg-black bg-white  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex justify-center">
