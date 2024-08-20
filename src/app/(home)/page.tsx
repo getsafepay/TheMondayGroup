@@ -20,9 +20,9 @@ export default function Page({
         <section className="block w-full pt-40 z-50">
           <Container className="flex flex-col xl:flex-row">
             <Grid>
-              <Column columns={{ "": 12, "xl:": 8 }}>
+              <Column columns={{ "": 12, "xl:": 7 }}>
                 <div>
-                  <p className="text-left">
+                  <p className="text-justify">
                     The Monday Group is a multi-family office dedicated to
                     meeting the unique financial needs of high-net-worth
                     individuals and families. Prioritizing wealth preservation
