@@ -1,7 +1,5 @@
 import type { Config } from "tailwindcss";
-const svgToDataUri = require("mini-svg-data-uri");
-
-const colors = require("tailwindcss/colors");
+import svgToDataUri from "mini-svg-data-uri";
 const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
@@ -17,6 +15,7 @@ const config: Config = {
       colors: {
         "blue-mid-gradient": "#214BFF",
         "blue-last-gradient": "#183A8C",
+        "TMG-blue": "#00117e",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
