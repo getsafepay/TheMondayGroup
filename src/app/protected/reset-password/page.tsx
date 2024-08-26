@@ -1,7 +1,7 @@
-import { FormMessage, Message } from "@/components/forms/form-message";
-import { Input } from "@/components/forms/input";
-import { Label } from "@/components/forms/label";
-import { SubmitButton } from "@/components/forms/submit-button";
+import { FormMessage, Message } from "@/components/auth/forms/form-message";
+import { Input } from "@/components/auth/forms/input";
+import { Label } from "@/components/auth/forms/label";
+import { SubmitButton } from "@/components/auth/forms/submit-button";
 import { createClient } from "@/utils/supabase/server";
 import { encodedRedirect } from "@/utils/utils";
 
