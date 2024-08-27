@@ -50,7 +50,7 @@ export default async function ResetPassword({
   };
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center w-full">
+    <div className="flex-1 flex flex-col items-center justify-center w-full h-screen">
       <form className="flex flex-col w-full max-w-md p-4 gap-2 [&>input]:mb-4">
         <h1 className="text-2xl font-medium">Reset password</h1>
         <p className="text-sm text-foreground/60">
