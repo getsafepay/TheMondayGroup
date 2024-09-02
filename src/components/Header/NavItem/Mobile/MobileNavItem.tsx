@@ -3,6 +3,7 @@ import { ChevronRightIcon } from "lucide-react";
 import { MobileSubNav } from "@/components/Header/SubNav";
 import { SubNavigationProps } from "@/components/Header/types";
 import { Button, LinkButton } from "@/components/Button";
+import { LinkBase } from "@/components/Button/LinkBase";
 
 export interface MobileNavItemProps {
   title: string;
@@ -65,9 +66,12 @@ export function SignupNavItem() {
 export function LoginNavItem() {
   return (
     <li className=" pb-4 pt-6 relative px-6 md:px-12">
-      <LinkButton variant="primary" color="black">
-        Member Login
-      </LinkButton>
+      {/* <LinkButton variant="primary" color="black">
+        Login
+      </LinkButton> */}
+      <LinkBase href="/login" className="underline">
+        login
+      </LinkBase>
     </li>
   );
 }

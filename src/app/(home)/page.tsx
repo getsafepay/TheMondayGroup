@@ -1,4 +1,3 @@
-import { WavyBackground } from "@/components/AnimatedBG/Wavy";
 import { Column, Container, Grid } from "@/components/Foundations";
 import { Transition } from "@/components/Transition";
 
@@ -17,11 +16,11 @@ export default function Page({
       <div className="h-screen w-full dark:bg-black bg-gray-200  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex justify-center">
         {/* Radial gradient for the container to give a faded look */}
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)]"></div>{" "}
-        <section className="block w-full pt-14 z-50">
+        <section className="block w-full pt-14">
           <Container className="flex flex-col xl:flex-row">
             <Grid>
               <Column columns={{ "": 12, "xl:": 7 }}>
-                <div>
+                <div className="pt-20">
                   <p className="text-justify">
                     The Monday Group is a multi-family office dedicated to
                     meeting the unique financial needs of high-net-worth
