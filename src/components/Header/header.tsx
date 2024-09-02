@@ -14,6 +14,7 @@ import { useOutsideClick } from "@/hooks/useClickOutside";
 import { getViewportSize } from "@/helpers/viewPortSize";
 import { BurgerIcon } from "../Burger";
 import { Logo } from "../Logo";
+import { createClient } from "@/utils/supabase/client";
 
 export interface HeaderProps {
   navigation: NavigationItemProps[];
@@ -26,6 +27,43 @@ export function Header(props: HeaderProps) {
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
   const [activeTab, setActiveTab] = useState("");
   const router = useRouter();
+  const [user, setUser] = useState<any>(undefined);
+  const [userBasedNav, setUserBasedNav] = useState<Array<NavigationItemProps>>(
+    []
+  );
+  const supabase = createClient();
+  const getUser = async () => {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    setUser(user);
+  };
+
+  useEffect(() => {
+    if (!user) {
+      setUserBasedNav([]);
+      return;
+    }
+    if (user?.user_metadata.isAdmin) {
+      setUserBasedNav(navigation);
+      return;
+    }
+    if (!user.user_metadata.isAdmin) {
+      setUserBasedNav(
+        navigation.filter(
+          (item: NavigationItemProps) => item.adminOnly === false
+        )
+      );
+      return;
+    }
+  }, [user]);
+
+  useEffect(() => {
+    getUser();
+    setActiveTab("");
+    setMobileMenuVisible(false);
+  }, [pathname]);
+
   const handleClickDesktopNavigationItem = useCallback(
     (navKey: string) => {
       const item = navigation.find((item) => item.navKey === navKey);
@@ -82,16 +120,11 @@ export function Header(props: HeaderProps) {
     setMobileMenuVisible(false);
   });
 
-  useEffect(() => {
-    setActiveTab("");
-    setMobileMenuVisible(false);
-  }, [pathname]);
-
   return (
     <header
       ref={ref}
       className={mergeClasses(
-        "h-20 w-full z-20 transition-all transparent",
+        "h-20 w-full z-20 transition-all transparent bg-white border-b",
         // showHeader ? "translate-y-0" : "-translate-y-full",
         fixHeader ? "fixed" : "absolute"
         // scrollPosition > 0
@@ -106,11 +139,12 @@ export function Header(props: HeaderProps) {
               <div className="flex items-center h-full z-20">
                 <Logo />
               </div>
-              {/* <div className="h-full relative w-full">
+              <div className="h-full relative w-full">
                 <DesktopNavigation
-                  navigation={props.navigation}
+                  navigation={userBasedNav}
                   handleClickNavigationItem={handleClickDesktopNavigationItem}
                   activeTab={activeTab}
+                  isUserLoggedIn={user ? true : false}
                 />
                 <div className="flex justify-end xl:hidden">
                   <button
@@ -121,7 +155,7 @@ export function Header(props: HeaderProps) {
                   </button>
                   <MobileNavigation
                     visible={isMobileMenuVisible}
-                    navigation={props.navigation}
+                    navigation={userBasedNav}
                     activeTab={activeTab}
                     handleClickShowNavigationItem={
                       handleClickDesktopNavigationItem
@@ -131,7 +165,7 @@ export function Header(props: HeaderProps) {
                     }
                   />
                 </div>
-              </div> */}
+              </div>
             </Column>
           </Grid>
         </Container>

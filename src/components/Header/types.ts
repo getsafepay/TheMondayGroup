@@ -21,4 +21,5 @@ export interface NavigationItemProps {
   navKey: string;
   href?: string;
   subNav?: SubNavigationProps;
+  adminOnly?: boolean;
 }

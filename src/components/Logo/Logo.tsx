@@ -10,7 +10,7 @@ export function Logo() {
       <div className="flex z-10">
         <Image
           src="/images/LogoTMG.png"
-          width={250}
+          width={200}
           height={100}
           className="block"
           alt="Logo"

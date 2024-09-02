@@ -126,8 +126,8 @@ export function LoginNavItem() {
       </Button> */}
 
       {/* <Link href="/">Member login</Link> */}
-      <LinkBase href="/" className="underline">
-        Member login
+      <LinkBase href="/login" className="underline">
+        login
       </LinkBase>
     </li>
   );

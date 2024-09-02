@@ -10,6 +10,7 @@ export interface DesktopNavigationProps {
   navigation: NavigationItemProps[];
   activeTab: string;
   handleClickNavigationItem: (navKey: string) => void;
+  isUserLoggedIn: boolean | null;
 }
 
 export function DesktopNavigation(props: DesktopNavigationProps) {
@@ -32,7 +33,8 @@ export function DesktopNavigation(props: DesktopNavigationProps) {
         className="flex h-full items-center list-none m-0 p-0"
       >
         {navItems}
-        <LoginNavItem />
+        {props.isUserLoggedIn ? <></> : <LoginNavItem />}
+
         {/* <SignupNavItem /> */}
       </ul>
     </nav>
