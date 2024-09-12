@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { mergeClasses } from "@/helpers/mergeClasses";
 import { ChevronDownIcon } from "lucide-react";
 import { DesktopSubNav } from "@/components/Header/SubNav";
@@ -6,8 +6,10 @@ import { SubNavigationProps } from "@/components/Header/types";
 import { Container } from "@/components/Foundations";
 import { Button, LinkButton } from "@/components/Button";
 import { AnimatePresence, delay, motion } from "framer-motion";
-import Link from "next/link";
 import { LinkBase } from "@/components/Button/LinkBase";
+import Image from "next/image";
+import AuthBtn from "@/components/auth/AuthBtn";
+
 export interface DesktopNavItemProps {
   title: string;
   navKey: string;
@@ -127,7 +129,7 @@ export function LoginNavItem() {
 
       {/* <Link href="/">Member login</Link> */}
       <LinkBase href="/login" className="underline">
-        login
+        Login
       </LinkBase>
     </li>
   );
@@ -139,6 +141,44 @@ export function SignupNavItem() {
       <Button variant="primary" color="blue">
         Sign Up
       </Button>
+    </li>
+  );
+}
+
+export function ProfileNavItem() {
+  const [display, setDisplay] = useState(true);
+
+  return (
+    <li
+      role="none"
+      className="flex items-center h-full m-0 p-0 ml-6 flex-1 justify-end"
+    >
+      <div className="relative ml-3">
+        <div>
+          <button
+            type="button"
+            className="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-200"
+            id="user-menu-button"
+            onClick={() => setDisplay(!display)}
+          >
+            <span className="absolute -inset-1.5"></span>
+            <span className="sr-only">Open user menu</span>
+            <Image
+              className="h-8 w-8 rounded-full"
+              alt=""
+              width={80}
+              height={80}
+              src="/images/avatar-profile.png"
+            />
+          </button>
+        </div>
+        <div
+          className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+          hidden={display}
+        >
+          <AuthBtn />
+        </div>
+      </div>
     </li>
   );
 }

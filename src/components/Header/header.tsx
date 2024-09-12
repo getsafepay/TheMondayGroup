@@ -163,6 +163,7 @@ export function Header(props: HeaderProps) {
                     handleClickHideNavigationItem={
                       handleClickDesktopNavigationItem
                     }
+                    isUserLoggedIn={user ? true : false}
                   />
                 </div>
               </div>

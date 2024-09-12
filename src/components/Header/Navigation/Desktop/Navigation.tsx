@@ -3,8 +3,10 @@ import { DesktopNavItem } from "@/components/Header/NavItem";
 import { NavigationItemProps } from "@/components/Header/types";
 import {
   LoginNavItem,
+  ProfileNavItem,
   SignupNavItem,
 } from "../../NavItem/Desktop/DesktopNavItem";
+import Image from "next/image";
 
 export interface DesktopNavigationProps {
   navigation: NavigationItemProps[];
@@ -34,8 +36,7 @@ export function DesktopNavigation(props: DesktopNavigationProps) {
       >
         {navItems}
         {props.isUserLoggedIn ? <></> : <LoginNavItem />}
-
-        {/* <SignupNavItem /> */}
+        {props.isUserLoggedIn ? <ProfileNavItem /> : <></>}
       </ul>
     </nav>
   );
