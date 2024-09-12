@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
+import { redirect } from "next/navigation";
 
 function PostCard(post: Post) {
   return (
@@ -26,6 +27,10 @@ export default function Home() {
   const posts = allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date))
   );
+
+  if (posts.length > 0) {
+    return redirect(`/protected/posts/${posts[0].slug}`);
+  }
 
   return (
     <div className="mx-auto max-w-4xl py-8 mt-20 px-4">

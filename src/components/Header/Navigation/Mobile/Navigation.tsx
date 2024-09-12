@@ -4,8 +4,10 @@ import { NavigationItemProps } from "@/components/Header/types";
 import { MobileNavItem } from "@/components/Header/NavItem";
 import {
   LoginNavItem,
+  ProfileNavItem,
   SignupNavItem,
 } from "../../NavItem/Mobile/MobileNavItem";
+import AuthBtn from "@/components/auth/AuthBtn";
 
 export interface MobileNavProps {
   navigation: NavigationItemProps[];
@@ -13,6 +15,7 @@ export interface MobileNavProps {
   visible: boolean;
   handleClickShowNavigationItem: (navKey: string) => void;
   handleClickHideNavigationItem: (navKey: string) => void;
+  isUserLoggedIn: boolean | null;
 }
 
 export function MobileNavigation(props: MobileNavProps) {
@@ -44,8 +47,8 @@ export function MobileNavigation(props: MobileNavProps) {
       <nav className="w-full mt-20 h-full md:w-[420px]">
         <ul className="bg-white h-full w-full list-none">
           {navItems}
-          <LoginNavItem />
-          {/* <SignupNavItem /> */}
+          {props.isUserLoggedIn ? <></> : <LoginNavItem />}
+          {props.isUserLoggedIn ? <ProfileNavItem /> : <></>}
         </ul>
       </nav>
     </div>

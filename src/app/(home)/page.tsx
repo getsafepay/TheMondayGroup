@@ -10,17 +10,24 @@ export default function Page({
 }) {
   return (
     <Transition>
-      <div className="h-screen w-screen bg-black overflow-hidden absolute">
+      {/* Older values
+       <div className="h-screen w-screen bg-black overflow-hidden absolute">
         <div className="bg-gradient-to-r from-blue-last-gradient  via-TMG-blue to-indigo-500  h-[44%] w-[200%] bg-black -skew-y-12  absolute z-30 -bottom-32 md:-bottom-20 -left-40 right-40 after:rotate-12"></div>
+      </div> */}
+
+      <div className="h-screen w-screen bg-black overflow-hidden absolute">
+        <div className="bg-gradient-to-r from-gray-500  via-gray-700 to-gray-900  h-[44%] w-[200%] bg-black -skew-y-12  absolute z-30 -bottom-32 md:-bottom-20 -left-40 right-40 after:rotate-12"></div>
       </div>
-      <div className="h-screen w-full dark:bg-black bg-gray-200  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] relative flex justify-center">
+
+      {/* older values: bg-gray-200 */}
+      <div className="h-screen w-full bg-TMG-blue  dark:bg-dot-white/[0.2] bg-dot-white/[0.4] relative flex justify-center">
         {/* Radial gradient for the container to give a faded look */}
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_50%,black)]"></div>{" "}
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center bg-blue-900 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>{" "}
         <section className="block w-full pt-14">
           <Container className="flex flex-col xl:flex-row">
             <Grid>
               <Column columns={{ "": 12, "xl:": 7 }}>
-                <div className="pt-20">
+                <div className="mt-20 bg-gray-200 p-10">
                   <p className="text-justify">
                     The Monday Group is a multi-family office dedicated to
                     meeting the unique financial needs of high-net-worth

@@ -4,6 +4,7 @@ import { MobileSubNav } from "@/components/Header/SubNav";
 import { SubNavigationProps } from "@/components/Header/types";
 import { Button, LinkButton } from "@/components/Button";
 import { LinkBase } from "@/components/Button/LinkBase";
+import AuthBtn from "@/components/auth/AuthBtn";
 
 export interface MobileNavItemProps {
   title: string;
@@ -30,17 +31,17 @@ export function MobileNavItem(props: MobileNavItemProps) {
   }, [props.subNav, props.isActive]);
 
   return (
-    <li className="first-of-type:pt-6 pb-4 pt-4 bg-white relative px-6 md:px-12">
-      <LinkButton
+    <li className=" first-of-type:pt-6 pt-4 bg-white relative px-10 text-sm ">
+      <button
         onClick={props.href ? () => {} : handleOnClick}
-        href={props.href}
-        variant="primary"
+        // href={props.href}
+        //variant="primary"
         color="black"
-        className="items-center justify-between w-full cursor-pointer"
-        rightIcon={!props.href}
+        className=""
+        // rightIcon={!props.href}
       >
         {props.title}
-      </LinkButton>
+      </button>
       {/* <button
         onClick={handleOnClick}
         className="flex items-center justify-between w-full text-left text-default p-0.5 transform text-[32px]"
@@ -48,7 +49,7 @@ export function MobileNavItem(props: MobileNavItemProps) {
         <span>{props.title}</span>
         <ChevronRightIcon size={"32px"} />
       </button> */}
-      {subNav}
+      {/* {subNav} */}
     </li>
   );
 }
@@ -70,8 +71,18 @@ export function LoginNavItem() {
         Login
       </LinkButton> */}
       <LinkBase href="/login" className="underline">
-        login
+        Login
       </LinkBase>
+    </li>
+  );
+}
+
+export function ProfileNavItem() {
+  return (
+    <li className="first-of-type:pt-6 pb-4 pt-4 bg-white relative px-6 ">
+      <div className="">
+        <AuthBtn />
+      </div>
     </li>
   );
 }
