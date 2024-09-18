@@ -27,8 +27,8 @@ export default function Page({
           <Container className="flex flex-col xl:flex-row">
             <Grid>
               <Column columns={{ "": 12, "xl:": 7 }}>
-                <div className="mt-20 bg-gray-200 p-10">
-                  <p className="text-justify">
+                <div className="mt-20 p-10">
+                  <p className="text-justify text-white">
                     The Monday Group is a multi-family office dedicated to
                     meeting the unique financial needs of high-net-worth
                     individuals and families. Prioritizing wealth preservation
@@ -37,7 +37,7 @@ export default function Page({
                     venture capital.
                   </p>
 
-                  <p className="mt-8 text-left">
+                  <p className="mt-8 text-left text-white">
                     For inquiries please email:{" "}
                     <b>
                       <u>

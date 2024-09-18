@@ -66,55 +66,55 @@ export default async function Page({ params }: { params: { slug: string } }) {
         {post.toc && (
           <div className="text-sm bg-white hidden xl:block">
             <div className="sticky top-20 -mt-10 py-12">
-              {/* <DashboardTableOfContents toc={toc} /> */}
-              {/* <div className="w-full rounded-md py-6 px-2">
-              <div className="space-y-2">
-                <p className="font-semibold border-b-2">Quick Links</p>
+              <DashboardTableOfContents toc={toc} />
+              <div className="w-full rounded-md py-6 px-2">
+                <div className="space-y-2">
+                  <p className="font-semibold border-b-2">Quick Links</p>
 
-                <ul className="m-0 list-none">
-                  <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
-                    <a
-                      href={"/"}
-                      className={
-                        "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
-                      }
-                    >
-                      Sample Title 1
-                    </a>
-                  </li>
-                  <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
-                    <a
-                      href={"/"}
-                      className={
-                        "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
-                      }
-                    >
-                      Sample Title 2
-                    </a>
-                  </li>
-                  <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
-                    <a
-                      href={"/"}
-                      className={
-                        "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
-                      }
-                    >
-                      Sample Title 3
-                    </a>
-                  </li>
-                  <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
-                    <a
-                      href={"/"}
-                      className={
-                        "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
-                      }
-                    >
-                      Sample long Title 1, testing it
-                    </a>
-                  </li>
-                </ul>
+                  <ul className="m-0 list-none">
+                    <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
+                      <a
+                        href={"/"}
+                        className={
+                          "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
+                        }
+                      >
+                        Sample Title 1
+                      </a>
+                    </li>
+                    <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
+                      <a
+                        href={"/"}
+                        className={
+                          "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
+                        }
+                      >
+                        Sample Title 2
+                      </a>
+                    </li>
+                    <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
+                      <a
+                        href={"/"}
+                        className={
+                          "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
+                        }
+                      >
+                        Sample Title 3
+                      </a>
+                    </li>
+                    <li className="mt-0 pt-2 border-b  font-medium pl-2 min-w-36">
+                      <a
+                        href={"/"}
+                        className={
+                          "inline-block font-sans no-underline transition-colors text-gray-600 hover:text-black"
+                        }
+                      >
+                        Sample long Title 1, testing it
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            </div> */}
             </div>
           </div>
         )}
